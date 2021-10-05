@@ -10,7 +10,7 @@
       {{ mensaje.texto }}
     </b-alert>
 
-    <form @submit.prevent="agregarUsuario(usuario)" v-if="agregar">
+    <form @submit.prevent="agregarUsuario()" v-if="agregar">
       <h3 class="text-center">Agregar nuevo usuario</h3>
       <input
         type="text"
@@ -30,7 +30,7 @@
     </form>
 
     <!-- Formulario edicion -->
-    <form @submit.prevent="editarUsuario(usuario)" v-else>
+    <form @submit.prevent="editarUsuario(usuarioEditar)" v-else>
       <h3 class="text-center">Editar Usuario</h3>
       <input
         type="text"
@@ -52,7 +52,7 @@
       >
     </form>
 
-    <br /><br /><br /><br /><br /><br />
+    <br /><br /><br />
 
     <h2 class="text-center">Tabla Usuarios</h2>
     <br /><br />
@@ -115,6 +115,7 @@ export default {
       this.axios
         .get("/usuario")
         .then((res) => {
+          console.log(res.data);
           this.usuarios = res.data;
         })
         .catch((e) => {
@@ -122,16 +123,18 @@ export default {
         });
     },
 
-    agregarUsuario(item) {
+    agregarUsuario() {
       this.axios
-        .post("nuevo-usuario", item)
+        .post("/nuevo-usuario", this.usuario)
         .then((res) => {
           // Agrega al inicio de nuestro array usuario
-          this.usuario.unshift(res.data);
+          this.usuario.push(res.data);
+          this.usuario.nombre="";
+          this.usuario.descripcion="";
           // Alerta de mensaje
-          this.showAlert();
           this.mensaje.texto = "Usuario Agregada!";
           this.mensaje.color = "success";
+          this.showAlert();
         })
         .catch((e) => {
           console.log(e.response.data.error.errors.nombre.message);
@@ -165,7 +168,7 @@ export default {
       this.editar = true;
       
       this.axios
-        .get(`/usuario/?_id=${id}`)
+        .get(`usuario/${id}`)
         .then((res) => {
           this.usuarioEditar = res.data;
         })
@@ -174,25 +177,27 @@ export default {
         });
     },
 
-    // editarUsuario(item) {
-    //   this.axios
-    //     .put(`usuario/${item._id}`, item)
-    //     .then((res) => {
-    //       let index = this.usuarios.findIndex(
-    //         (itemUsuario) => itemUsuario._id === this.usuarioEditar._id
-    //       );
-    //       this.usuarios[index].nombre = this.usuarioEditar.nombre;
-    //       this.usuarios[index].descripcion = this.usuarioEditar.descripcion;
-    //       this.usuarioEditar = {};
-    //       this.showAlert();
-    //       this.mensaje.texto = "Usuario Actualizado";
-    //       this.mensaje.color = "success";
-    //     })
-    //     .catch((e) => {
-    //       console.log(e);
-    //     });
-    //   this.agregar = true;
-    // },
+      editarUsuario(item) {
+        this.axios
+          .put(`/usuario/${item._id}`, item)
+          .then((res) => {
+            let index = this.usuarios.findIndex(
+              (itemUsuario) => itemUsuario._id === this.usuarioEditar._id
+            );
+            this.usuarios[index].nombre = res.data.nombre;
+            this.usuarios[index].descripcion = res.data.descripcion;
+            this.usuarioEditar = {};
+            this.mensaje.texto = "Usuario Actualizado";
+            this.mensaje.color = "success";
+            this.showAlert();
+            this.agregar = true;
+            this.editar = false;
+          })
+          .catch((e) => {
+            console.log(e);
+          });
+        this.agregar = true;
+      },
 
     countDownChanged(dismissCountDown) {
       this.dismissCountDown = dismissCountDown;
