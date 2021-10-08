@@ -1,7 +1,8 @@
-import express from 'express';
-import morgan from 'morgan';
-import cors from 'cors';
-import path from 'path';
+const express = require('express')
+const morgan = require('morgan')
+const cors = require('cors')
+const path = require('path')
+
 
 const app = express();
 
@@ -29,6 +30,9 @@ app.use(express.urlencoded({ extended: true }));
 
 // Rutas
 app.use('/api', require('./src/routes/usuario'));
+app.use('/api', require('./src/routes/empanadas'));
+app.use('/api', require('./src/routes/combos'));
+app.use('/api', require('./src/routes/bebidas'));
 // app.get('/', function (req, res) {
 //     res.send('Hello World!');
 // });
