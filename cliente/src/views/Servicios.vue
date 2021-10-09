@@ -5,8 +5,9 @@
     <b-row class="mt-5">
       <b-col cols="12" md="4">
         <b-card
+        overlay
           title="Combos"
-          :img-src="require('../assets/servicio1.png')"
+          :img-src="require('../assets/combos.jpg')"
           img-alt="Image"
           img-top
           tag="article"
@@ -23,8 +24,9 @@
 
       <b-col cols="12" md="4">
         <b-card
+        overlay
           title="Empanadas"
-          :img-src="require('../assets/servicio2.png')"
+          :img-src="require('../assets/empanadas.jpg')"
           img-alt="Image"
           img-top
           tag="article"
@@ -41,8 +43,9 @@
 
       <b-col cols="12" md="4">
         <b-card
+        overlay
           title="Bebidas"
-          :img-src="require('../assets/servicio3.png')"
+          :img-src="require('../assets/bebidas.jpg')"
           img-alt="Image"
           img-top
           tag="article"
@@ -60,6 +63,7 @@
     </b-container>
   </div>
 </template>
+
 
 <script>
 export default {
