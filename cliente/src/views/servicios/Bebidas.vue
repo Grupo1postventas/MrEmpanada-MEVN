@@ -5,9 +5,9 @@
     <b-row class="mt-5">
       <b-col cols="12" md="4">
         <b-card
-        overlay
+        
           title="Jugo de maracuya"
-          :img-src="require('./assets/jugo-de-maracuya.jpg')"
+          :img-src="require('./assets/maracuya.jpg')"
           img-alt="Image"
           img-top
           tag="article"
@@ -24,9 +24,9 @@
 
       <b-col cols="12" md="4">
         <b-card
-        overlay
+        
           title="Limonada"
-          :img-src="require('./assets/jugo-de-maracuya.jpg')"
+          :img-src="require('./assets/limonada.jpg')"
           img-alt="Image"
           img-top
           tag="article"
@@ -43,9 +43,9 @@
 
       <b-col cols="12" md="4">
         <b-card
-        overlay
+        
           title="Capuchino"
-          :img-src="require('./assets/jugo-de-maracuya.jpg')"
+          :img-src="require('./assets/capuchino.jpg')"
           img-alt="Image"
           img-top
           tag="article"

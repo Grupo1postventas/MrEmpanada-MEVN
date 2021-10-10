@@ -5,9 +5,9 @@
     <b-row class="mt-5">
       <b-col cols="12" md="4">
         <b-card
-        overlay
+        
           title="Mr. Hawaiana"
-          :img-src="require('./assets/empanada.jpg')"
+          :img-src="require('./assets/mrhawuania.jpg')"
           img-alt="Image"
           img-top
           tag="article"
@@ -26,9 +26,9 @@
 
       <b-col cols="12" md="4">
         <b-card
-        overlay
+        
           title="Mr. Jamón y queso"
-          :img-src="require('./assets/empanada.jpg')"
+          :img-src="require('./assets/mrjamonyqueso.jpg')"
           img-alt="Image"
           img-top
           tag="article"
@@ -45,9 +45,9 @@
 
       <b-col cols="12" md="4">
         <b-card
-        overlay
+        
           title="Mr. Chorizo"
-          :img-src="require('./assets/empanada.jpg')"
+          :img-src="require('./assets/mrchorizo.jpg')"
           img-alt="Image"
           img-top
           tag="article"
