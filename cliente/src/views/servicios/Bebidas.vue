@@ -1,77 +1,147 @@
 <template>
   <div class="mt-5">
     <b-container>
+      <div class="bebidas">  
+      <div class="container mt-5">  
+        <b-card  
+          no-body  
+          class="overflow-hidden"  
+          style="max-width"  
+          bg-variant="warning"  
+          align="center"  
+        >  <h1>Bebidas</h1>
+          <b-card-body>  
+           
+        <div>
 
-    <b-row class="mt-5">
-      <b-col cols="12" md="4">
-        <b-card
-        
-          title="Jugo de maracuya"
-          :img-src="require('./assets/maracuya.jpg')"
-          img-alt="Image"
-          img-top
-          tag="article"
-          style="max-width: 20rem"
-          class="mb-2"
-        >
-          <b-card-text>
-            Jugo natural de maracuya
-          </b-card-text>
 
-          <b-button  variant="primary">Comprar</b-button>
-        </b-card>
-      </b-col>
-
-      <b-col cols="12" md="4">
-        <b-card
-        
-          title="Limonada"
-          :img-src="require('./assets/limonada.jpg')"
-          img-alt="Image"
-          img-top
-          tag="article"
-          style="max-width: 20rem"
-          class="mb-2"
-        >
-          <b-card-text>
-            ¡Deliciosa limonada!
-          </b-card-text>
-
-          <b-button  variant="primary">Comprar</b-button>
-        </b-card>
-      </b-col>
-
-      <b-col cols="12" md="4">
-        <b-card
-        
-          title="Capuchino"
-          :img-src="require('./assets/capuchino.jpg')"
-          img-alt="Image"
-          img-top
-          tag="article"
-          style="max-width: 20rem"
-          class="mb-2"
-        >
-          <b-card-text>
-            Bebida caliente de café
-          </b-card-text>
-
-          <b-button  variant="primary">Comprar</b-button>
-        </b-card>
-      </b-col>
-    </b-row>
-    </b-container>
-   <b-row class="mt-5">
+      <b-container>
+        <b-row class="mt-5">
      <b-col cols="12" md="6">
        <b-car>
          <b-button  href="/servicios/empanadas" variant ="primary">Empanadas</b-button>
        </b-car>
 
      </b-col>
-     
+    </b-row>
 
-
-   </b-row>
-  </div>
+      </b-container>
+       
+    </div> 
+          </b-card-body>  
+        </b-card>  
+      </div> 
+       
+    </div>  
   
+
+ <div class="bebidas">
+            <div class= "container-mt5">
+                <b-card>
+                    <b-row no-gutters>
+                        <b-col md="4">
+                            <b-card-img
+                                :src="require('./assets/maracuya.jpg')"  
+                                alt="Image"  
+                                class="rounded-0"
+                                style="max-width: 15rem"
+                                >
+                                
+
+                            </b-card-img>
+
+                        </b-col>
+                        <b-col md="4">
+                            <b-card-text
+                            class="text-center">
+                            <h1>Jugo de Maracuya</h1>
+                                Delicioso jugo natural de maracuya. 
+
+                            </b-card-text>
+
+                        </b-col>
+                        <b-col md="4">
+                           <b-button variant="primary">Comprar</b-button>
+
+                        </b-col>
+
+                    </b-row>
+
+             
+                </b-card>
+                <b-card>
+                    <b-row no-gutters>
+                        <b-col md="4">
+                            <b-card-img
+                                :src="require('./assets/limonada.jpg')"  
+                                alt="Image"  
+                                class="rounded-0"
+                                style="max-width: 15rem"
+                                >
+                                
+
+                            </b-card-img>
+
+                        </b-col>
+                        <b-col md="4">
+                            <b-card-text
+                            title="Jugo de Maracuya">
+                            <h1>Limonada</h1>
+                                Deliciosa limonada natural.  
+
+                            </b-card-text>
+
+                        </b-col>
+                        <b-col md="4">
+                            <b-button variant="primary">Comprar</b-button>
+
+                        </b-col>
+
+                    </b-row>
+
+             
+                </b-card>
+                <b-card>
+                    <b-row no-gutters>
+                        <b-col md="4">
+                            <b-card-img
+                                :src="require('./assets/capuchino.jpg')"  
+                                alt="Image"  
+                                class="rounded-0"
+                                style="max-width: 15rem"
+                                >
+                                
+
+                            </b-card-img>
+
+                        </b-col>
+                        <b-col md="4">
+                            <b-card-text
+                            title="Jugo de Maracuya">
+                            <h1>Capuchino</h1>
+                                Bebida caliente a base de café.  
+
+                            </b-card-text>
+
+                        </b-col>
+                        <b-col md="4">
+                            <b-button variant="primary">Comprar</b-button>
+
+                        </b-col>
+
+                    </b-row>
+
+             
+                </b-card>
+            </div>
+        </div>
+
+    </b-container>
+    
+  
+
+
+  </div>
+
+
 </template>
