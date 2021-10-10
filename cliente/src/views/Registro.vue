@@ -10,52 +10,59 @@
       {{ mensaje.texto }}
     </b-alert>
 
-    <form @submit.prevent="agregarUsuario()" v-if="agregar">
-      <h3 class="text-center">Agregar nuevo usuario</h3>
-      <input
-        type="text"
-        placeholder="Ingrese un Nombre"
-        class="form-control my-2"
-        v-model="usuario.nombre"
-      />
-      <input
-        type="text"
-        placeholder="Ingrese una descripcion"
-        class="form-control my-2"
-        v-model="usuario.descripcion"
-      />
-      <b-button class="btn-sm btn-block btn-success" type="submit"
-        >Agregar</b-button
-      >
+    <!-- Formulario Agregar -->
+    <form @submit.prevent="agregarUsuario()" v-if="agregar" class="vh-100">
+      <v-card width="500" class="mx-auto text-center">
+        <br>
+        <h3 class="text-center">Agregar nuevo usuario</h3>
+        <input
+          type="text"
+          placeholder="Ingrese un Nombre"
+          class="form-control my-2"
+          v-model="usuario.nombre"
+        />
+        <input
+          type="text"
+          placeholder="Ingrese una descripcion"
+          class="form-control my-2"
+          v-model="usuario.descripcion"
+        />
+        <b-button class="btn-sm btn-block btn-success" type="submit" 
+          >Agregar</b-button
+        > 
+      </v-card>
     </form>
 
     <!-- Formulario edicion -->
     <form @submit.prevent="editarUsuario(usuarioEditar)" v-else>
-      <h3 class="text-center">Editar Usuario</h3>
-      <input
-        type="text"
-        placeholder="Ingrese un Nombre"
-        class="form-control my-2"
-        v-model="usuarioEditar.nombre"
-      />
-      <input
-        type="text"
-        placeholder="Ingrese una descripcion"
-        class="form-control my-2"
-        v-model="usuarioEditar.descripcion"
-      />
-      <b-button class="btn-sm btn-block mb-1 btn-warning" type="submit"
-        >Editar</b-button
-      >
-      <b-button class="btn-sm btn-block" @click="agregar = true"
-        >Cancelar</b-button
-      >
+      <v-card width="500" class="mx-auto mt-9">
+        <h3 class="text-center">Editar Usuario</h3>
+        <input
+          type="text"
+          placeholder="Ingrese un Nombre"
+          class="form-control my-2"
+          v-model="usuarioEditar.nombre"
+        />
+        <input
+          type="text"
+          placeholder="Ingrese una descripcion"
+          class="form-control my-2"
+          v-model="usuarioEditar.descripcion"
+        />
+        <b-button class="btn-sm btn-block mb-1 btn-warning" type="submit"
+          >Editar</b-button
+        >
+        <b-button class="btn-sm btn-block" @click="agregar = true"
+          >Cancelar</b-button
+        >
+      </v-card>
     </form>
 
     <br /><br /><br />
 
     <h2 class="text-center">Tabla Usuarios</h2>
     <br /><br />
+    <v-card width="800" class="mx-auto mt-9">
     <table class="table">
       <thead>
         <tr>
@@ -87,6 +94,7 @@
         </tr>
       </tbody>
     </table>
+    </v-card>
   </div>
 </template>
 
@@ -129,8 +137,8 @@ export default {
         .then((res) => {
           // Agrega al inicio de nuestro array usuario
           this.usuario.push(res.data);
-          this.usuario.nombre="";
-          this.usuario.descripcion="";
+          this.usuario.nombre = "";
+          this.usuario.descripcion = "";
           // Alerta de mensaje
           this.mensaje.texto = "Usuario Agregada!";
           this.mensaje.color = "success";
@@ -166,7 +174,7 @@ export default {
     activarEdicion(id) {
       this.agregar = false;
       this.editar = true;
-      
+
       this.axios
         .get(`usuario/${id}`)
         .then((res) => {
@@ -177,27 +185,27 @@ export default {
         });
     },
 
-      editarUsuario(item) {
-        this.axios
-          .put(`/usuario/${item._id}`, item)
-          .then((res) => {
-            let index = this.usuarios.findIndex(
-              (itemUsuario) => itemUsuario._id === this.usuarioEditar._id
-            );
-            this.usuarios[index].nombre = res.data.nombre;
-            this.usuarios[index].descripcion = res.data.descripcion;
-            this.usuarioEditar = {};
-            this.mensaje.texto = "Usuario Actualizado";
-            this.mensaje.color = "success";
-            this.showAlert();
-            this.agregar = true;
-            this.editar = false;
-          })
-          .catch((e) => {
-            console.log(e);
-          });
-        this.agregar = true;
-      },
+    editarUsuario(item) {
+      this.axios
+        .put(`/usuario/${item._id}`, item)
+        .then((res) => {
+          let index = this.usuarios.findIndex(
+            (itemUsuario) => itemUsuario._id === this.usuarioEditar._id
+          );
+          this.usuarios[index].nombre = res.data.nombre;
+          this.usuarios[index].descripcion = res.data.descripcion;
+          this.usuarioEditar = {};
+          this.mensaje.texto = "Usuario Actualizado";
+          this.mensaje.color = "success";
+          this.showAlert();
+          this.agregar = true;
+          this.editar = false;
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+      this.agregar = true;
+    },
 
     countDownChanged(dismissCountDown) {
       this.dismissCountDown = dismissCountDown;

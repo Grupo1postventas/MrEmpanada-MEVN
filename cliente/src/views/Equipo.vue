@@ -2,7 +2,7 @@
     <b-container>
               <section class="equipo empanada">
             <div class="tripulante">
-                <b-img :src="require('../assets/fredy.jpg')" class="imagen-equipo" alt="Imagen de Fredy"></b-img>
+                <b-img :src="require('../assets/fredy2.jpg')" class="imagen-equipo" alt="Imagen de Fredy"></b-img>
                 <br><br>
                 <h2 class="nombre fredy">Jhon Fredy Ospina Galeano</h2>
                 <h4 class="nombre">Scrum Master</h4>
@@ -12,7 +12,7 @@
                 Soy un apasionado por la música, el ajedrez y la observación de aves.</p>
             </div>
             <div class="tripulante">
-                <b-img :src="require('../assets/otro.jpg')" class="imagen-equipo" alt="Imagen de Fredy"></b-img>
+                <b-img :src="require('../assets/fredy2.jpg')" class="imagen-equipo" alt="Imagen de Fredy"></b-img>
                 <br><br>
                 <h2 class="nombre Yeison">Yeison Armando Buitrago Lopez</h2>
                 <h4 class="nombre">Product Owner</h4>
@@ -20,7 +20,7 @@
                 <p>Estudiante de ingeniería electrónica de la Universidad Nacional, a lo largo de mi carrera me he visto interesado por los circuitos y su estrecho vínculo con la programación. Por esta razón considero que adquirir buenos conocimientos en ambas áreas me ayudarán a desarrollar dispositivos inteligentes que planteen soluciones simples a problemas cotidianos.</p>
             </div>
             <div class="tripulante">
-                <b-img :src="require('../assets/otro.jpg')" class="imagen-equipo" alt="Imagen de Fredy"></b-img>
+                <b-img :src="require('../assets/fredy2.jpg')" class="imagen-equipo" alt="Imagen de Fredy"></b-img>
                 <br><br>
                 <h2 class="nombre Mario">Mario Fernando Acosta Alvarez</h2>
                 <h4 class="nombre">Develop Team</h4>
