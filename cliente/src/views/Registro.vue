@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container mt-5">
     <b-alert
       :show="dismissCountDown"
       dismissible
@@ -11,90 +11,123 @@
     </b-alert>
 
     <!-- Formulario Agregar -->
-    <form @submit.prevent="agregarUsuario()" v-if="agregar" class="vh-100">
-      <v-card width="500" class="mx-auto text-center">
-        <br>
-        <h3 class="text-center">Agregar nuevo usuario</h3>
-        <input
-          type="text"
-          placeholder="Ingrese un Nombre"
-          class="form-control my-2"
-          v-model="usuario.nombre"
-        />
-        <input
-          type="text"
-          placeholder="Ingrese una descripcion"
-          class="form-control my-2"
-          v-model="usuario.descripcion"
-        />
-        <b-button class="btn-sm btn-block btn-success" type="submit" 
-          >Agregar</b-button
-        > 
+    <form @submit.prevent="agregarUsuario()" v-if="agregar">
+      <v-card width="500" class="mx-auto">
+        <br />
+        <h4 class="text-center">
+          Crea un nuevo usuario en <br />
+          <strong>Mr.Empanada</strong>
+        </h4>
+        <div class="container mt-5">
+          <h6 class="text-sm-left">Nombre Completo</h6>
+          <input
+            type="text"
+            placeholder="Ingrese un Nombre"
+            class="form-control my-2"
+            v-model="usuario.nombre"
+          />
+          <h6 class="text-sm-left">Correo Electrónico</h6>
+          <input
+            type="text"
+            placeholder="Ingrese una dirección de e-mail"
+            class="form-control my-2"
+            v-model="usuario.email"
+          />
+          <h6 class="text-sm-left">Telefono</h6>
+          <input
+            type="text"
+            placeholder="Ingrese un numero de telefono"
+            class="form-control my-2"
+            v-model="usuario.telefono"
+          />
+        </div>
+        <div class="container mt-4 text-center">
+          <b-button class="btn-block btn-success" type="submit"
+            >Agregar</b-button
+          >
+          <br />
+          <br />
+        </div>
       </v-card>
     </form>
 
     <!-- Formulario edicion -->
     <form @submit.prevent="editarUsuario(usuarioEditar)" v-else>
-      <v-card width="500" class="mx-auto mt-9">
-        <h3 class="text-center">Editar Usuario</h3>
-        <input
-          type="text"
-          placeholder="Ingrese un Nombre"
+      <v-card width="500" class="mx-auto">
+        <h3 class="text-center">Editar Usuario <br />
+          <strong>Mr.Empanada</strong></h3>
+        <div class="container mt-5">
+          <h6 class="text-sm-left">Nombre Completo</h6>
+          <input
+            type="text"
           class="form-control my-2"
-          v-model="usuarioEditar.nombre"
-        />
-        <input
-          type="text"
-          placeholder="Ingrese una descripcion"
-          class="form-control my-2"
-          v-model="usuarioEditar.descripcion"
-        />
-        <b-button class="btn-sm btn-block mb-1 btn-warning" type="submit"
-          >Editar</b-button
-        >
-        <b-button class="btn-sm btn-block" @click="agregar = true"
-          >Cancelar</b-button
-        >
+            v-model="usuario.nombre">
+          <h6 class="text-sm-left">Correo Electrónico</h6>
+          <input
+            type="text"
+            class="form-control my-2"
+            v-model="usuario.email">
+          <h6 class="text-sm-left">Telefono</h6>
+          <input
+            type="text"
+            class="form-control my-2"
+            v-model="usuario.telefono">
+        </div>
+        <div class="container mt-4 text-center">
+          <b-button class="btn-sm btn-block btn-warning" type="submit"
+            >Editar</b-button
+          >
+          <b-button class="btn-sm btn-block" @click="agregar = true"
+            >Cancelar</b-button
+          >
+          <br><br>
+        </div>
       </v-card>
     </form>
 
-    <br /><br /><br />
+    <div class="container mt-5 mx-auto text-center">
+      <a href="#Tabla">
+        <b-button class="btn-sm" variant="danger">Ver Usuarios</b-button>
+      </a>
+      <br /><br /><br />
+    </div>
 
-    <h2 class="text-center">Tabla Usuarios</h2>
+    <h2 id="Tabla" class="text-center mt-5">
+      Usuarios <strong>Mr.Empanada</strong>
+    </h2>
     <br /><br />
     <v-card width="800" class="mx-auto mt-9">
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Nombre</th>
-          <th scope="col">Descripción</th>
-          <th scope="col">Fecha</th>
-          <th scope="col">Acciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="(item, index) in usuarios" :key="index">
-          <th scope="row">{{ item._id }}</th>
-          <td>{{ item.nombre }}</td>
-          <td>{{ item.descripcion }}</td>
-          <td>{{ item.date }}</td>
-          <td>
-            <b-button
-              class="btn-warning btn-sm mx-2"
-              @click="activarEdicion(item._id)"
-              >Actualizar</b-button
-            >
-            <b-button
-              class="btn-danger btn-sm mx-2"
-              @click="eliminarUsuario(item._id)"
-              >Eliminar</b-button
-            >
-          </td>
-        </tr>
-      </tbody>
-    </table>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Email</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(item, index) in usuarios" :key="index">
+            <td>{{ item.nombre }}</td>
+            <td>{{ item.email }}</td>
+            <td>{{ item.telefono }}</td>
+            <td>
+              <b-button
+                class="btn-warning btn-sm mx-2"
+                @click="activarEdicion(item._id)"
+                >Actualizar</b-button
+              >
+              <b-button
+                class="btn-danger btn-sm mx-2"
+                @click="eliminarUsuario(item._id)"
+                >Eliminar</b-button
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </v-card>
+    <br><br>
   </div>
 </template>
 
@@ -107,7 +140,7 @@ export default {
       dismissCountDown: 0,
 
       usuarios: [],
-      usuario: { nombre: "", descripcion: "" },
+      usuario: { nombre: "", email: "", telefono: "" },
       agregar: true,
       editar: false,
       usuarioEditar: {},
@@ -138,9 +171,10 @@ export default {
           // Agrega al inicio de nuestro array usuario
           this.usuario.push(res.data);
           this.usuario.nombre = "";
-          this.usuario.descripcion = "";
+          this.usuario.email = "";
+          this.usuario.telefono = "";
           // Alerta de mensaje
-          this.mensaje.texto = "Usuario Agregada!";
+          this.mensaje.texto = "Usuario Agregado!";
           this.mensaje.color = "success";
           this.showAlert();
         })
@@ -176,7 +210,7 @@ export default {
       this.editar = true;
 
       this.axios
-        .get(`usuario/${id}`)
+        .get(`/usuario/${id}`)
         .then((res) => {
           this.usuarioEditar = res.data;
         })
@@ -193,7 +227,8 @@ export default {
             (itemUsuario) => itemUsuario._id === this.usuarioEditar._id
           );
           this.usuarios[index].nombre = res.data.nombre;
-          this.usuarios[index].descripcion = res.data.descripcion;
+          this.usuarios[index].email = res.data.email;
+          this.usuarios[index].telefono = res.data.telefono;
           this.usuarioEditar = {};
           this.mensaje.texto = "Usuario Actualizado";
           this.mensaje.color = "success";

@@ -29,13 +29,10 @@
       </b-container>
     </b-navbar>
     <!-- Fin Header -->
-
-    <b-container class="mt-5"></b-container>
-
     <router-view />
 
     <!-- Footer -->
-    <v-footer dark padless class="mt-5">
+    <v-footer dark padless>
       <v-card flat tile class="indigo lighten-1 white--text text-center">
         <v-card-text class="mx-2">
           <v-btn icon href="https://www.facebook.com/MisterEmpanadasCali" class="mx-4">
