@@ -61,7 +61,7 @@
                             <b-card-text
                             class="center">
                             <h1>Mr. Hawaiana</h1>
-                                Pefecta combinacioón de trozos de jamón de cerdo ahumado combinado con piña colada y queso doble crema. 
+                              <h3>Pefecta combinacioón de trozos de jamón de cerdo ahumado combinado con piña colada y queso doble crema.</h3>   
 
                             </b-card-text>
 
@@ -75,6 +75,7 @@
 
              
                 </b-card>
+                <br>
                 <b-card>
                     <b-row no-gutters>
                         <b-col md="4">
@@ -93,7 +94,7 @@
                             <b-card-text
                             title="Jugo de Maracuya">
                             <h1>Mr. Jamón y Queso</h1>
-                                Trozos de jamón de cerdo ahumado combinado con delicioso queso crema. 
+                               <h3>Trozos de jamón de cerdo ahumado combinado con delicioso queso crema. </h3> 
 
                             </b-card-text>
 
@@ -107,6 +108,7 @@
 
              
                 </b-card>
+                <br>
                 <b-card>
                     <b-row no-gutters>
                         <b-col md="4">
@@ -125,12 +127,13 @@
                             <b-card-text
                             title="Jugo de Maracuya">
                             <h1>Mr. Chorizo</h1>
-                                Exquisito chorizo de cerdo combinado con maiz tierno y delicioso queso crema.
+                            <h3>Exquisito chorizo de cerdo combinado con maiz tierno y delicioso queso crema.</h3>
+                                
                             </b-card-text>
 
                         </b-col>
                         <b-col md="4">
-                            <b-button variant="primary">Comprar</b-button>
+                            <b-button class = "center" variant="primary">Comprar</b-button>
 
                         </b-col>
 

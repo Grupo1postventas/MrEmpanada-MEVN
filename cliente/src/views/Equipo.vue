@@ -12,12 +12,12 @@
                 Soy un apasionado por la música, el ajedrez y la observación de aves.</p>
             </div>
             <div class="tripulante">
-                <b-img :src="require('../assets/otro.jpg')" class="imagen-equipo" alt="Imagen de Fredy"></b-img>
+                <b-img :src="require('../assets/yeison.png')" class="imagen-equipo" alt="Imagen de Fredy"></b-img>
                 <br><br>
                 <h2 class="nombre Yeison">Yeison Armando Buitrago Lopez</h2>
                 <h4 class="nombre">Product Owner</h4>
                 <hr>
-                <p>Estudiante de ingeniería electrónica de la Universidad Nacional, a lo largo de mi carrera me he visto interesado por los circuitos y su estrecho vínculo con la programación. Por esta razón considero que adquirir buenos conocimientos en ambas áreas me ayudarán a desarrollar dispositivos inteligentes que planteen soluciones simples a problemas cotidianos.</p>
+                <p>Estudiante de matemáticas apasionado por el desarrollo web, el aprendizaje automatico y profundo</p>
             </div>
             <div class="tripulante">
                 <b-img :src="require('../assets/otro.jpg')" class="imagen-equipo" alt="Imagen de Fredy"></b-img>

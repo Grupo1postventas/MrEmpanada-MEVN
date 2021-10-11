@@ -13,6 +13,7 @@
           <b-card-body>  
            
         <div>
+          <br>
 
 
       <b-container>
@@ -61,7 +62,7 @@
                             <b-card-text
                             class="center">
                             <h1>Pruebita</h1>
-                                1 Jugo natural, 1 Mr. Chorizo, 1 Mr. Arequipe
+                               <h2>1 Jugo natural, 1 Mr. Chorizo, 1 Mr. Arequipe</h2> 
 
                             </b-card-text>
 
@@ -75,6 +76,7 @@
 
              
                 </b-card>
+                <br>
                 <b-card>
                     <b-row no-gutters>
                         <b-col md="4">
@@ -93,7 +95,7 @@
                             <b-card-text
                             title="Jugo de Maracuya">
                             <h1>Exquisito</h1>
-                                2 Jugos Naturales, 1 Mr. Chorizo, 1 Mr. Jamón y queso,1 Mr. Arequipe
+                               <h2>2 Jugos Naturales, 1 Mr. Chorizo, 1 Mr. Jamón y queso,1 Mr. Arequipe</h2> 
                             </b-card-text>
 
                         </b-col>
@@ -106,6 +108,7 @@
 
              
                 </b-card>
+                <br>
                 <b-card>
                     <b-row no-gutters>
                         <b-col md="4">
@@ -124,7 +127,8 @@
                             <b-card-text
                             title="Jugo de Maracuya">
                             <h1>Suculento</h1>
-                               3 Jugos naturales, 3 Mr. Jamón y queso, 2 Mr. Chorizo, 1 Mr. Arequipe.
+                               
+                               <h2>3 Jugos naturales, 3 Mr. Jamón y queso, 2 Mr. Chorizo, 1 Mr. Arequipe.</h2>
                             </b-card-text>
 
                         </b-col>

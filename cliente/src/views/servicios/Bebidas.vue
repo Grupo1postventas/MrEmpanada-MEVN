@@ -13,11 +13,13 @@
           <b-card-body>  
            
         <div>
+          
 
 
       <b-container>
         <b-row class="mt-5">
      <b-col cols="12" md="6">
+       <br>
        <b-car>
          <b-button  href="/servicios/empanadas" variant ="primary">Empanadas</b-button>
        </b-car>
@@ -53,9 +55,11 @@
                         </b-col>
                         <b-col md="4">
                             <b-card-text
-                            class="text-center">
+                            class="center">
                             <h1>Jugo de Maracuya</h1>
-                                Delicioso jugo natural de maracuya. 
+                            <br>
+                            <h2>Delicioso jugo natural de maracuya. </h2>
+                                
 
                             </b-card-text>
 
@@ -69,6 +73,7 @@
 
              
                 </b-card>
+                <br>
                 <b-card>
                     <b-row no-gutters>
                         <b-col md="4">
@@ -87,7 +92,7 @@
                             <b-card-text
                             title="Jugo de Maracuya">
                             <h1>Limonada</h1>
-                                Deliciosa limonada natural.  
+                                <h2>Deliciosa limonada natural.  </h2> 
 
                             </b-card-text>
 
@@ -101,6 +106,7 @@
 
              
                 </b-card>
+                <br>
                 <b-card>
                     <b-row no-gutters>
                         <b-col md="4">
@@ -119,7 +125,7 @@
                             <b-card-text
                             title="Jugo de Maracuya">
                             <h1>Capuchino</h1>
-                                Bebida caliente a base de café.  
+                               <h2>Bebida caliente a base de café.</h2>   
 
                             </b-card-text>
 
