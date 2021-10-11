@@ -54,40 +54,52 @@
     <!-- Formulario edicion -->
     <form @submit.prevent="editarUsuario(usuarioEditar)" v-else>
       <v-card width="500" class="mx-auto">
-        <h3 class="text-center">Editar Usuario <br />
-          <strong>Mr.Empanada</strong></h3>
+        <h3 class="text-center">
+          Editar Usuario <br />
+          <strong>Mr.Empanada</strong>
+        </h3>
         <div class="container mt-5">
           <h6 class="text-sm-left">Nombre Completo</h6>
           <input
             type="text"
-          class="form-control my-2"
-            v-model="usuario.nombre">
+            class="form-control my-2"
+            v-model="usuarioEditar.nombre"
+          />
           <h6 class="text-sm-left">Correo Electrónico</h6>
           <input
             type="text"
             class="form-control my-2"
-            v-model="usuario.email">
+            v-model="usuarioEditar.email"
+          />
           <h6 class="text-sm-left">Telefono</h6>
           <input
             type="text"
             class="form-control my-2"
-            v-model="usuario.telefono">
+            v-model="usuarioEditar.telefono"
+          />
         </div>
         <div class="container mt-4 text-center">
-          <b-button class="btn-sm btn-block btn-warning" type="submit"
-            >Editar</b-button
-          >
-          <b-button class="btn-sm btn-block" @click="agregar = true"
-            >Cancelar</b-button
-          >
-          <br><br>
+          <b-row class="mt-5">
+            <b-col>
+              <b-button class="btn-block btn-warning" type="submit"
+                >Editar</b-button
+              >
+            </b-col>
+
+            <b-col>
+              <b-button class="btn-block" @click="agregar = true"
+                >Cancelar</b-button
+              >
+              <br /><br />
+            </b-col>
+          </b-row>
         </div>
       </v-card>
     </form>
 
     <div class="container mt-5 mx-auto text-center">
       <a href="#Tabla">
-        <b-button class="btn-sm" variant="danger">Ver Usuarios</b-button>
+        <b-button variant="danger">Ver Usuarios</b-button>
       </a>
       <br /><br /><br />
     </div>
@@ -127,7 +139,7 @@
         </tbody>
       </table>
     </v-card>
-    <br><br>
+    <br /><br />
   </div>
 </template>
 
