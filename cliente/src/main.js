@@ -12,7 +12,7 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 
 // Agregamos la URL base de nuestra API
-axios.defaults.baseURL = 'https://mr-empanadag1.herokuapp.com/api';
+axios.defaults.baseURL = 'mongodb+srv://Mr_empanada:grupo1@cluster0.frczg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
 Vue.use(VueAxios, axios)
 Vue.use(BootstrapVue)
