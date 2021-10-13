@@ -6,7 +6,7 @@
       <b-col cols="12" md="4">
         <b-card
           title="Combos"
-          :img-src="require('../assets/servicio1.png')"
+          :img-src="require('../assets/servicio1.jpg')"
           img-alt="Image"
           img-top
           tag="article"
@@ -24,7 +24,7 @@
       <b-col cols="12" md="4">
         <b-card
           title="Empanadas"
-          :img-src="require('../assets/servicio2.png')"
+          :img-src="require('../assets/servicio2.jpg')"
           img-alt="Image"
           img-top
           tag="article"
@@ -42,7 +42,7 @@
       <b-col cols="12" md="4">
         <b-card
           title="Bebidas"
-          :img-src="require('../assets/servicio3.png')"
+          :img-src="require('../assets/servicio3.jpg')"
           img-alt="Image"
           img-top
           tag="article"

@@ -30,6 +30,11 @@ const routes = [
     name: 'Registro',
     component: () => import(/* webpackChunkName: "about" */ '../views/Registro.vue')
   },
+  {
+    path: '/ingreso',
+    name: 'Ingreso',
+    component: () => import(/* webpackChunkName: "about" */ '../components/Ingreso.vue')
+  },
   // ______________________________Apartado de servicios____________________________
   {
     path: '/servicios/combos',

@@ -76,7 +76,7 @@ router.put('/usuario/:id', async (req, res) => {
             _id,
             body,
             { new: true });
-        res.json(notaDb);
+        res.json(usuarioDb);
     } catch (error) {
         return res.status(400).json({
             mensaje: 'Ocurrio un error',
