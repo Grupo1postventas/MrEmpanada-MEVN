@@ -2,7 +2,7 @@
     <b-container>
               <section class="equipo empanada">
             <div class="tripulante">
-                <b-img :src="require('../assets/fredy.jpg')" class="imagen-equipo" alt="Imagen de Fredy"></b-img>
+                <b-img :src="require('../assets/fredy2.jpg')" class="imagen-equipo" alt="Imagen de Fredy"></b-img>
                 <br><br>
                 <h2 class="nombre fredy">Jhon Fredy Ospina Galeano</h2>
                 <h4 class="nombre">Scrum Master</h4>
